@@ -1,0 +1,10 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: app
+    src: app
+    engine: python3.9
+    public_routes:
+      - "/test" # exact match
+      - "/public/*" # wildcards
+      - "/api/*/docs" # wildcards can be placed anywhere
